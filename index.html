@@ -87,34 +87,34 @@
         }
 
         .scroll-to-top {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #6200ea;
-            color: #ffffff;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-            z-index: 2; /* Ensure button is above other elements */
+            display: none; /* Hidden initially */
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Distance from the bottom */
+            right: 20px; /* Distance from the right */
+            background-color: #6200ea; /* Button background color */
+            color: #ffffff; /* Button text color */
+            border: none; /* No border */
+            border-radius: 50%; /* Circular button */
+            width: 50px; /* Button width */
+            height: 50px; /* Button height */
+            font-size: 24px; /* Font size */
+            cursor: pointer; /* Pointer cursor */
+            transition: background-color 0.3s, color 0.3s; /* Transition effects */
+            z-index: 1000; /* Ensure button is above other elements */
         }
 
         .scroll-to-top:hover {
-            background-color: #bb86fc;
-            color: black;
+            background-color: #bb86fc; /* Background color on hover */
+            color: black; /* Text color on hover */
         }
 
         /* Position adjustments for the scroll-to-top button on tablet screens */
         @media (max-width: 768px) {
             .scroll-to-top {
-                bottom: 30px; /* Increases distance from bottom */
-                right: 10px; /* Adjusts distance from the right side */
+                bottom: 30px; /* Increase distance from bottom */
+                right: 10px; /* Adjust distance from right */
                 width: 45px; /* Slightly smaller button */
-                height: 45px;
+                height: 45px; /* Slightly smaller height */
             }
         }
     </style>

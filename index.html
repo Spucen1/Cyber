@@ -11,10 +11,17 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            background: url(pngtree-an-illustration-of-a-city-on-a-neon-neon-lit-river-picture-image_2725763.jpg.png) no-repeat;
-            background-size: 2000px;
-            background-attachment: fixed;
+            background: url(pngtree-an-illustration-of-a-city-on-a-neon-neon-lit-river-picture-image_2725763.jpg.png) no-repeat center center fixed;
+            background-size: cover;
         }
+        
+        /* Mobile and tablet view fix for background */
+        @media (max-width: 768px) {
+            body {
+                background-attachment: scroll;
+            }
+        }
+
         h1, h2 {
             color: #bb86fc;
             margin: 40px 0 20px 0; /* Pridané medzery okolo nadpisov */

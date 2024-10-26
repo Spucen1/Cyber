@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyberpunkové Bicykle</title>
+    <title>Kyberpunkové</title>
     <style>
+        /* Full viewport height for dark background */
+        html, body {
+            height: 100%;
+            background-color: black;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
         /* Fix background image using a pseudo-element */
         body::before {
             content: "";
@@ -20,7 +27,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            color: #fff; /* Ensuring text is readable over the background */
+            color: #fff;
             margin: 0;
             padding: 0;
             text-align: center;

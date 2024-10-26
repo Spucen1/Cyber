@@ -8,29 +8,20 @@
         /* Full viewport height for dark background */
         html, body {
             height: 100%;
-            background-color: black;
+            background-color: black; /* Solid black background */
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
-        /* Fix background image using a pseudo-element */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: url('pngtree-an-illustration-of-a-city-on-a-neon-neon-lit-river-picture-image_2725763.jpg.png') no-repeat center center;
-            background-size: cover;
-            z-index: -1;
-        }
-
+        /* Fix background image directly on body */
         body {
             font-family: Arial, sans-serif;
             color: #fff;
             margin: 0;
             padding: 0;
             text-align: center;
+            background: url('pngtree-an-illustration-of-a-city-on-a-neon-neon-lit-river-picture-image_2725763.jpg.png') no-repeat center center; 
+            background-size: cover; /* Ensure the image covers the entire viewport */
+            position: relative; /* Position for absolute children */
         }
 
         h1, h2 {
@@ -47,6 +38,8 @@
             margin-right: auto;
             box-shadow: 0 0 10px black;
             backdrop-filter: blur(20px);
+            position: relative; /* Position to manage z-index */
+            z-index: 1; /* Make sure section is above the background image */
         }
 
         img {
@@ -65,6 +58,8 @@
             margin-left: auto;
             margin-right: auto;
             backdrop-filter: blur(20px);
+            position: relative; /* Position to manage z-index */
+            z-index: 1; /* Ensure nav is above the background image */
         }
 
         nav a {
@@ -105,11 +100,22 @@
             font-size: 24px;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
+            z-index: 2; /* Ensure button is above other elements */
         }
 
         .scroll-to-top:hover {
             background-color: #bb86fc;
             color: black;
+        }
+
+        /* Position adjustments for the scroll-to-top button on tablet screens */
+        @media (max-width: 768px) {
+            .scroll-to-top {
+                bottom: 30px; /* Increases distance from bottom */
+                right: 10px; /* Adjusts distance from the right side */
+                width: 45px; /* Slightly smaller button */
+                height: 45px;
+            }
         }
     </style>
 </head>

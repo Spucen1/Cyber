@@ -1,191 +1,36 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyberpunkové</title>
+    <title>Document</title>
     <style>
-        /* Full viewport height for dark background */
-        html, body {
-            height: 100%;
-            background-color: black; /* Solid black background */
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
-
-        /* Fix background image directly on body */
-        body {
-            font-family: Arial, sans-serif;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background: url('pngtree-an-illustration-of-a-city-on-a-neon-neon-lit-river-picture-image_2725763.jpg.png') no-repeat center center; 
-            background-size: cover; /* Ensure the image covers the entire viewport */
-            position: relative; /* Position for absolute children */
-        }
-
-        h1, h2 {
-            color: #bb86fc;
-            margin: 40px 0 20px 0;
-        }
-
-        section {
-            margin-bottom: 50px;
-            padding: 20px;
-            border-radius: 20px;
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 0 0 10px black;
-            backdrop-filter: blur(20px);
-            position: relative; /* Position to manage z-index */
-            z-index: 1; /* Make sure section is above the background image */
+        body{
+            margin: auto;
+            background-color: black;
+            width: 800px;
         }
 
         img {
-            max-width: 80%;
-            height: auto;
-            margin: 20px 0;
-            border-radius: 15px;
+            display: block;
+            margin: auto;
+            margin-top: 10px;
+            width: 200px;
+            height: 100px;
+            object-fit: cover;
+            object-position: 0 30%;
+            transition: all 1s;
+            border-radius: 20px;
         }
 
-        nav {
-            padding: 10px 0;
-            margin-bottom: 20px;
-            overflow-x: auto;
-            white-space: nowrap;
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            backdrop-filter: blur(20px);
-            position: relative; /* Position to manage z-index */
-            z-index: 1; /* Ensure nav is above the background image */
-        }
-
-        nav a {
-            color: #7943a8;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            display: inline-block;
-            border-radius: 10px;
-        }
-
-        nav a:hover {
-            background-color: #bb86fc;
-            color: black;
-            border-radius: 10px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            padding: 0 20px;
-            color: #595959;
-        }
-
-        .scroll-to-top {
-            display: none; /* Hidden initially */
-            position: fixed; /* Fixed position */
-            bottom: 20px; /* Distance from the bottom */
-            right: 20px; /* Distance from the right */
-            background-color: #6200ea; /* Button background color */
-            color: #ffffff; /* Button text color */
-            border: none; /* No border */
-            border-radius: 50%; /* Circular button */
-            width: 50px; /* Button width */
-            height: 50px; /* Button height */
-            font-size: 24px; /* Font size */
-            cursor: pointer; /* Pointer cursor */
-            transition: background-color 0.3s, color 0.3s; /* Transition effects */
-            z-index: 1000; /* Ensure button is above other elements */
-        }
-
-        .scroll-to-top:hover {
-            background-color: #bb86fc; /* Background color on hover */
-            color: black; /* Text color on hover */
-        }
-
-        /* Position adjustments for the scroll-to-top button on tablet screens */
-        @media (max-width: 768px) {
-            .scroll-to-top {
-                bottom: 30px; /* Increase distance from bottom */
-                right: 10px; /* Adjust distance from right */
-                width: 45px; /* Slightly smaller button */
-                height: 45px; /* Slightly smaller height */
-            }
+        img:hover {
+            width: 500px;
+            height: 700px;
+            transition: all 1s;
         }
     </style>
 </head>
 <body>
-
-    <!-- Navigation menu -->
-    <nav>
-        <a href="#historia">História Kyberpunkových Bicyklov</a>
-        <a href="#technologie">Moderné Technológie</a>
-        <a href="#dizajn">Dizajn a Štýl</a>
-        <a href="#galeria">Galéria</a>
-    </nav>
-
-    <h1>Kyberpunkové Bicykle: Cesta do Dystopickej Budúcnosti</h1>
-
-    <!-- History Section -->
-    <section id="historia">
-        <h2>História Kyberpunkových Bicyklov</h2>
-        <p>
-            V kyberpunkovom žánri sa bicykle objavujú ako ekologický a minimalistický spôsob dopravy. V dystopickej budúcnosti, kde megakorporácie ovládajú mestá a infraštruktúru, ľudia hľadajú lacné a efektívne spôsoby pohybu. Bicykle sa často objavujú ako prostriedok odporu proti technologickému preťaženiu a znečisteniu.
-        </p>
-        <img src="image.webp" alt="Kyberpunkový Bicykel">
-    </section>
-
-    <!-- Modern Technology Section -->
-    <section id="technologie">
-        <h2>Moderné Technológie</h2>
-        <p>
-            Moderné kyberpunkové bicykle nie sú len obyčajné stroje. Sú vybavené pokročilými technológiami, ako sú holografické displeje, GPS navigácia, biometrické uzamykanie a elektrické motory pre asistenciu pri šliapaní. Tieto prvky umožňujú cyklistom efektívne manévrovať cez preplnené mestské ulice a rýchlo sa prispôsobiť meniacim sa podmienkam.
-        </p>
-        <img src="image.png" alt="Moderné Technológie v Kyberpunkovom Bicykli">
-    </section>
-
-    <!-- Design and Style Section -->
-    <section id="dizajn">
-        <h2>Dizajn a Štýl</h2>
-        <p>
-            Dizajn kyberpunkových bicyklov je charakteristický svojím industriálnym vzhľadom, ostrými líniami a neonovým osvetlením. Bicykle často kombinujú funkčnosť a estetiku, čím vytvárajú unikátny vizuálny dojem, ktorý ladí s kyberpunkovým prostredím. Mnohé modely majú osvetlené rámy a futuristické prvky, ktoré prispievajú k celkovej atmosfére vysokých technológií.
-        </p>
-        <img src="image2.png" alt="Kyberpunkový Dizajn">
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="galeria">
-        <h2>Galéria</h2>
-        <p>Pozrite si viac obrázkov kyberpunkových bicyklov:</p>
-        <img src="image3.png" alt="Kyberpunkový Bicykel 1">
-        <img src="IMG_5908.JPG" alt="Kyberpunkový Bicykel 2">
-        <img src="IMG_5909.JPG" alt="Kyberpunkový Bicykel 3">
-    </section>
-
-    <!-- Back to Top Button -->
-    <button class="scroll-to-top" id="scrollToTop" title="Späť na začiatok">&#8593;</button>
-
-    <script>
-        // Show back-to-top button on scroll
-        window.onscroll = function() {
-            var button = document.getElementById("scrollToTop");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                button.style.display = "block";
-            } else {
-                button.style.display = "none";
-            }
-        };
-
-        // Scroll to top function
-        document.getElementById("scrollToTop").onclick = function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        };
-    </script>
-
+    <img src="image.png" alt="none">
 </body>
 </html>
